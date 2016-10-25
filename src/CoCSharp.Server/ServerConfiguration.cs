@@ -21,10 +21,14 @@ namespace CoCSharp.Server
                 Create(path);
             }
         }
+        public ServerConfiguration()
+        {
+
+        }
 
         private readonly string _villageJson = File.ReadAllText("contents/starting_village.json");
         private static readonly ServerConfiguration _default =
-        new ServerConfiguration("config.xml")
+        new ServerConfiguration()
         {
             StartingGems = 69696969,
             StartingGold = 69696969,
